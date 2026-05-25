@@ -1,70 +1,86 @@
+
+# Btop gruvbox material dark (https://github.com/sainnhe/gruvbox-material) theme
+# by Marco Radocchia
+
 # Main background, empty for terminal default, need to be empty if you want transparent background
-theme[main_bg]="#f3e4cb"
+#theme[main_bg]=""
 
 # Main text color
-theme[main_fg]="#4d2e1a"
+theme[main_fg]="#d4be98"
 
 # Title color for boxes
-theme[title]="#9c3521"
+theme[title]="#d4be98"
 
 # Highlight color for keyboard shortcuts
-theme[hi_fg]="#755833"
+theme[hi_fg]="#ea6962"
 
-# Background color of selected item in processes box
-theme[selected_bg]="#9f8253"
+# Background color of selected items
+theme[selected_bg]="#d8a657"
 
-# Foreground color of selected item in processes box
-theme[selected_fg]="#4d2e1a"
+# Foreground color of selected items
+theme[selected_fg]="#282828"
 
 # Color of inactive/disabled text
-theme[inactive_fg]="#9f8253"
+theme[inactive_fg]="#282828"
+
+# Color of text appearing on top of graphs, i.e uptime and current network graph scaling
+theme[graph_text]="#665c54"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#9c3521"
+theme[proc_misc]="#a9b665"
 
-# Box outline and divider line color
-theme[cpu_box]="#a46d2d"
-theme[mem_box]="#a46d2d"
-theme[net_box]="#a46d2d"
-theme[proc_box]="#a46d2d"
-theme[div_line]="#9f8253"
+# Cpu box outline color
+theme[cpu_box]="#7c6f64"
 
-# Gradient for all meters and graphs
-theme[temp_start]="#755833"
-theme[temp_mid]="#a32f1a"
-theme[temp_end]="#a46d2d"
+# Memory/disks box outline color
+theme[mem_box]="#7c6f64"
 
+# Net up/down box outline color
+theme[net_box]="#7c6f64"
 
-theme[cpu_start]="#755833"
-theme[cpu_mid]="#a32f1a"
-theme[cpu_end]="#a46d2d"
+# Processes box outline color
+theme[proc_box]="#7c6f64"
 
+# Box divider line and small boxes line color
+theme[div_line]="#7c6f64"
 
-theme[free_start]="#a32f1a"
-theme[free_mid]="#a8611f"
-theme[free_end]="#a8611f"
+# Temperature graph colors
+theme[temp_start]="#7daea3"
+theme[temp_mid]="#e78a4e"
+theme[temp_end]="#ea6962"
 
+# CPU graph colors
+theme[cpu_start]="#a9b665"
+theme[cpu_mid]="#d8a657"
+theme[cpu_end]="#ea6962"
 
-theme[cached_start]="#a8611f"
-theme[cached_mid]="#a8611f"
-theme[cached_end]="#a8611f"
+# Mem/Disk free meter
+theme[free_start]="#89b482"
+theme[free_mid]=""
+theme[free_end]=""
 
+# Mem/Disk cached meter
+theme[cached_start]="#7daea3"
+theme[cached_mid]=""
+theme[cached_end]=""
 
-theme[available_start]="#755833"
-theme[available_mid]="#755833"
-theme[available_end]="#755833"
+# Mem/Disk available meter
+theme[available_start]="#d8a657"
+theme[available_mid]=""
+theme[available_end]=""
 
+# Mem/Disk used meter
+theme[used_start]="#ea6962"
+theme[used_mid]=""
+theme[used_end]=""
 
-theme[used_start]="#a46d2d"
-theme[used_mid]="#a46d2d"
-theme[used_end]="#a46d2d"
+# Download graph colors
+theme[download_start]="#e78a4e"
+theme[download_mid]=""
+theme[download_end]=""
 
+# Upload graph colors
+theme[upload_start]="#d3869b"
+theme[upload_mid]=""
+theme[upload_end]=""
 
-theme[download_start]="#a8611f"
-theme[download_mid]="#755833"
-theme[download_end]="#a32f1a"
-
-
-theme[upload_start]="#a8611f"
-theme[upload_mid]="#755833"
-theme[upload_end]="#a32f1a"
