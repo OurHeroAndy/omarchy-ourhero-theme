@@ -1,102 +1,95 @@
-@define-color selected-text #fabd2f;
-@define-color text #ebdbb2;
-@define-color base #282828;
-@define-color border #ebdbb2;
-@define-color foreground #d4be98;
-@define-color background #1d2021;
+@define-color selected-text #384f54;
+@define-color text #5f745d;
+@define-color base #dfe4c4;
+@define-color border #5f745d;
+@define-color border2 #253631;
+@define-color foreground #6b8c4f;
+@define-color background #dfe4c4;
 
+window * {
+    all: unset;
+    
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 17px;
+}
 
-/* window { */
-/*   background: #131515; */
-/*   font-family: "JetBrainsMono Nerd Font Propo"; */
-/*   font-size: 12px; */
-/*   font-weight: 700; */
-/*   color: #d4be98; */
-/* } */
+window .normal-icons,
+window .large-icons,
+window .item-image,
+window .symbols {
+    -gtk-icon-size: 18px;
+    min-width: 0;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
 
-/* ===== Outer frame ===== */
 window .box-wrapper {
-  background: #1d2021;
-  padding: 10px;
-  border: 3px solid #d7c7a3;        
-  border-radius: 8px;
-  margin: 0;
+    background: alpha(@base, 1);           /* dark transparency */
+    border: 2px solid alpha(@border2, 0.65);    /* visible border */
+    border-radius: 5px;
+    padding: 4px;
+    margin: 0;
+    box-shadow: 0 2px 12px alpha(black, 0.5);
+    backdrop-filter: blur(1px);
+    line-height: 10%;
+    color: @text;
 }
 
-/* ===== Inner frame ===== */
-window .content {
-  border: 2px solid #d8a657;        /* inner gold */
-  padding: 4px;
-}
-
-/* ===== Search bar ===== */
 window .search-container {
-  background: #1f1f1f;
-  border: 2px solid #d7c7a3;
-  border-radius: 8px;
-  margin-bottom: 8px;
+    border: 2px solid alpha(@border2, 0.4);    /* visible border */
+    border-radius: 4px;
+    padding: 6px 6px;
+    margin: 0x;
+    background: alpha(@border, 0.45);            /* slightly transparent */
+        box-shadow:
+        0 0 3px rgba(95, 129, 112, 0.4),
+        0 0 3px rgba(95, 129, 112, 0.4);
+    backdrop-filter: blur(1px);
+    line-height: 1em;
+    color: @selected-text;
 }
+
 
 window .input {
-  color: #d4be98;
-  padding: 3px;
-  font-weight: 700;
+    background: transparent;
+    color: @selected-text;
 }
 
-window .placeholder {
-  color: #d4be98;
-  opacity: 0.4;
+window .preview {
+    border: 0px solid alpha(@border, 0.65);
+    border-radius: 4px;
+    background: alpha(@base, 0.5);
+    color: @text;
+    padding: 10px 10px 10px;
+    margin: 10px 0px 10px;
+    box-shadow: inset 0 0 8px alpha(white, 0);
+    backdrop-filter: blur(8px);
+    line-height: 1em;
 }
 
-/* ===== List items ===== */
-child {
-  background: transparent;
-  padding: 2px;
-  margin: 0;
-  border: none;
-}
-
-/* ===== Hover ===== */
-child:hover {
-  background: #2a2a2a;
-}
-
-/* ===== Selected item ===== */
 child:selected {
-  background: #86a799;              /* yellow highlight */
-  border-radius : 8px;
+    border: 2px solid alpha(@border2, 0.4);
+    border-radius: 4px;
+    background-color: mix(#5f745d, @background, 0.85);
+    transition: all 0.15s ease-out;
+    transition: background-color 0s ease-out;
+    box-shadow:
+        0 0 3px rgba(95, 129, 112, 0.4),
+        0 0 3px rgba(95, 129, 112, 0.4);
+}
+child:selected .item-box {
+    
+    margin-left: 0px;
+    margin-top: 3px;
+    
 }
 
-/* ===== Icon ===== */
-child image {
-  margin-right: 10px;
+/* Revert Selected Item Color */
+child:selected .item-box * {
+    color: @selected-text;
 }
-
-/* ===== App name ===== */
-child label {
-  color: #ea6962;                   /* red app name */
-  font-weight: 800;
-}
-
-/* ===== Category text ===== */
-child label.secondary {
-  color: #d4be98;
-  font-style: italic;
-  font-weight: 400;
-}
-
-/* ===== Selected text colors ===== */
-child:selected label {
-  color: #a9a665;
-}
-
-child:selected label.secondary {
-  color: #1f1f1f;
-}
-
-/* Slimmer selection bar */
-child:selected {
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
-
